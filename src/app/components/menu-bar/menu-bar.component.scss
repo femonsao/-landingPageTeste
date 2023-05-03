@@ -1,0 +1,13 @@
+.container{
+    width: 100%;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+    .logo-container{
+
+    }
+    .menu-container{
+        justify-content: space-between;
+        align-items: center;
+    }
+}
