@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="carousel">
+        <div class="item" [style.backgroundImage]="
+        'url(' + imgs[indexImagemAtiva].img + ')'
+      "></div>
+
+        <div class="botoes-controle">
+            <button *ngFor="let imagem of imgs; index as i" [class.ativo]="i === indexImagemAtiva"
+                (click)="pararTimer(); ativarImagem(i)"></button>
+        </div>
+
+    </div>
+
+
+</div>

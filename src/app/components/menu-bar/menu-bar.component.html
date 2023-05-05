@@ -1,11 +1,12 @@
 <div class="container">
-    <div class="logo-container">
-        <img src="https://cdn1.polaris.com/globalassets/indian/2020/header/logo-indian.svg?v=84dc7d9c&format=webp" class="logo" >
+    <div class="logo-container" (click)="homeNavigator()">
+        <img src="https://cdn1.polaris.com/globalassets/indian/2020/header/logo-indian.svg?v=84dc7d9c&format=webp"
+            class="logo">
     </div>
     <div class="menu-container">
         <button mat-button (click)="homeNavigator()">Início</button>
-        <button mat-button (click)="homeNavigator()">Motos</button>
-        <button mat-button (click)="homeNavigator()">Orçamento</button>
-        <button mat-button (click)="homeNavigator()">Venha nos conhecer</button>
+        <button mat-button (click)="motorcyclesNavigator()">Motos</button>
+        <button mat-button (click)="budgetNavigator()">Orçamento</button>
+        <button mat-button (click)="visitNavigator()">Venha nos conhecer</button>
     </div>
 </div>

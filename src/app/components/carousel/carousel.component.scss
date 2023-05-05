@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    padding: 4px;
+    height: 28vw;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #888888;
+}
+
+.item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90%;
+    width: 99%;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+
+.botoes-controle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.botoes-controle button {
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+}
+
+.botoes-controle button.ativo {
+    background: #862633;
+    cursor: default;
+}

@@ -1,0 +1,32 @@
+<div class="container-home" [@appeard]="state">
+    <div class="carousel-container">
+        <app-carousel [imgs]="slides"></app-carousel>
+    </div>
+    <div class="top-background">
+        <img src="assets/img/top-background.jpg" alt="top-background">
+        <p>
+            Em 2018, a <strong> Indian Motorcycle </strong> lançou uma linha de motos bastante diversificada, incluindo
+            modelos clássicos,
+            customizados e de alto desempenho. Como por exemplo : Indian Chief Classic
+            Indian Chief Dark Horse, Indian Chieftain, Indian Chieftain Limited, Indian Roadmaster,Indian Scout
+            Indian Scout Bobber
+            Indian Springfield
+        </p>
+    </div>
+
+    <div class="history-conatiner">
+        <p>
+            A <strong>Indian Motorcycle</strong> é uma empresa americana de motocicletas que foi fundada em 1901 em
+            Springfield,
+            Massachusetts. A empresa é conhecida por seus modelos clássicos, como o Indian Chief e o Indian Scout, e tem
+            uma longa história de inovação e liderança no mercado de motocicletas. Hoje em dia, a Indian Motorcycle é
+            uma subsidiária da Polaris Inc. e continua a produzir motocicletas de alta qualidade com um estilo
+            distintivo e uma experiência de pilotagem excepcional. Se você está procurando por uma motocicleta que
+            combine tradição, estilo e desempenho, a Indian Motorcycle é uma excelente escolha.
+        </p>
+    </div>
+
+    <div #motocycleAnimation class="motocycle-animation-container" [@slideInLeft]="estado">
+        <img src="assets/img/fundo-remove.png" alt="Moto">
+    </div>
+</div>

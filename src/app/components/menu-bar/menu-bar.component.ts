@@ -4,17 +4,28 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-menu-bar',
   templateUrl: './menu-bar.component.html',
-  styleUrls: ['./menu-bar.component.scss']
+  styleUrls: ['./menu-bar.component.scss'],
 })
 export class MenuBarComponent {
+  constructor(private router: Router) {}
 
-  constructor(
-    private router: Router
-  ){}
-
-  public homeNavigator(){
-    this.router.navigateByUrl('/')
+  public homeNavigator() {
+    console.log('a');
+    this.router.navigateByUrl('/');
   }
 
+  public motorcyclesNavigator() {
+    console.log('a');
+    this.router.navigateByUrl('/motorcycles');
+  }
 
+  public budgetNavigator() {
+    console.log('a');
+    this.router.navigateByUrl('/budget');
+  }
+
+  public visitNavigator() {
+    console.log('a');
+    this.router.navigateByUrl('/visit');
+  }
 }

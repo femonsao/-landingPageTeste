@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="search">
+        <input type="text" />
+    </div>
+    <div class="cards-container">
+        <mat-card class="card" *ngFor="let motocycle of motocycles">
+            <mat-card-header>
+                <mat-card-title> <span>{{ motocycle.name }}</span></mat-card-title>
+            </mat-card-header>
+            <img mat-card-image [src]="motocycle.img" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>{{ motocycle.price}} </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
