@@ -9,12 +9,12 @@
 
     </form>
     <div class="list-btn">
+        <i class="material-icons" matTooltip="Cards">grid_view</i>
+        <mat-slide-toggle (click)="changeView()"> </mat-slide-toggle>
         <i class="material-icons" matTooltip="Tabela">list_alt
         </i>
-        <mat-slide-toggle (click)="changeView()"> </mat-slide-toggle>
-        <i class="material-icons" matTooltip="Cards">grid_view</i>
     </div>
-    <div class="cards-container" *ngIf="viewStyle" [@appeard]="state">
+    <div class="cards-container" *ngIf="!viewStyle  && motocycles.length > 0" [@appeard]="state">
         <mat-card class="card" *ngFor="let motocycle of motocycles">
             <img mat-card-image [src]="motocycle.img" alt="Photo of a Shiba Inu">
             <mat-card-header>
@@ -25,7 +25,7 @@
             </mat-card-content>
         </mat-card>
     </div>
-    <div *ngIf="!viewStyle" [@appeard]="state">
+    <div *ngIf="viewStyle && motocycles.length > 0" [@appeard]="state">
         <table mat-table [dataSource]="motocycles" class="mat-elevation-z8">
             <ng-container matColumnDef="img">
                 <th mat-header-cell *matHeaderCellDef> Foto </th>
@@ -51,5 +51,10 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
+    </div>
+    <div *ngIf="motocycles.length <= 0" class="cards-container">
+        <span class="not-data">Desculpe, não há dados disponíveis para exibição. <br> Por favor, tente pesquisar
+            novamente.
+        </span>
     </div>
 </div>
