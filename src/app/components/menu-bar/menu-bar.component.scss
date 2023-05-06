@@ -7,24 +7,28 @@
     margin-bottom: 2em;
 
     .logo-container {
-        width: 50%;
+        width: 10%;
     }
 
     .menu-container {
-        justify-content: space-between;
+        display: flex;
         align-items: center;
+        justify-content: center;
         width: 100%;
         padding: 0.5em;
+        align-self: center;
 
         button {
             font-size: 1.5em;
+            font-family: 'Lobster', cursive !important;
         }
     }
 }
 
 :host::ng-deep {
-    .mat-mdc-button:not(:disabled) {
-        color: #75747B;
+
+    .mat-mdc-button {
+        color: #000000;
     }
 
     .mat-mdc-button:hover {

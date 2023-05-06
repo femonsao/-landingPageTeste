@@ -1,1 +1,44 @@
-<p>budget works!</p>
+<div class="container" [@appeard]="state">
+    <div class="form-container">
+        <form [formGroup]="form">
+            <div class="form-content">
+                <div class="input-row">
+                    <span class="text-top">
+                        Peça já seu orçamento!
+                    </span>
+                </div>
+                <div class="input-row">
+                    <input type="text" formControlName="name" placeholder="Nome" required>
+                    <input type="text" formControlName="lastName" placeholder="Sobrenome" required>
+                </div>
+                <div class="input-row">
+                    <input type="text" formControlName="phone" placeholder="Telefone">
+                    <input type="email" formControlName="email" placeholder="Email" required>
+                </div>
+                <div class="input-row">
+                    <select formControlName="motocycleName" class="combo-box" required>
+                        <option value="" disabled selected hidden>Moto</option>
+                        <option *ngFor="let motocycle of motocyclesData" [value]="motocycle">{{ motocycle.name}}
+                        </option>
+                    </select>
+
+                    <select class="combo-box" formControlName="year" class="combo-box" required>
+                        <option value="" disabled selected hidden>Ano</option>
+                        <option *ngFor="let year of years" [value]="year">{{ year }}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="input-row">
+                    <span class="text">
+                        Por favor, preencha todos os campos para que possamos atendê-lo da melhor forma possível.
+                    </span>
+                </div>
+                <div class="btn-actions">
+                    <button mat-raised-button [disabled]="!form.valid" (click)="sendBudget()"
+                        color="primary">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

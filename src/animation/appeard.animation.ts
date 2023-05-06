@@ -19,19 +19,20 @@ export const APPEARD = trigger('appeard', [
   ]),
 ]);
 
-export const SLIDEINLEFT = trigger('slideInLeft', [
+export const APPEARDMOTOCYCLE = trigger('motocycleAnimation', [
   state(
     'ready',
     style({
       opacity: 1,
-      transform: 'translateX(0%)',
+      transform: 'translateX(50%)',
     })
   ),
+
   transition('void => ready', [
     style({
       opacity: 0,
-      transform: 'translateX(100%)',
+      transform: 'translateX(-40%)',
     }),
-    animate('500ms ease-in-out'),
+    animate('3000ms ease-in-out'),
   ]),
 ]);
